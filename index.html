@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./01/assets/G-Wrapper.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:15px;
+            background-color: black;
+        }
+        body>div:first-child{
+            gap:30px;
+            display: flex;
+        
+        }
+        body>div:nth-child(2){
+            /* background-color: aqua; */
+            display: inline-flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            color:white;
+            gap:0px;
+            width:43%;
+            text-align: center;
+            
+        }
+        body>div:nth-child(2)>p:hover span{
+            color: rgba(81, 236, 53, 0.631);
+            cursor: default;
+        }
+        body>div:nth-child(2)>p{
+            width:100%;
+            padding:10px;
+            line-height: 28px;
+            transform: skew(-6deg);
+            
+        }
+        body>div:nth-child(2)>p>span{
+            color:rgb(225, 225, 65);
+            margin-left:2px;
+            font-size: 18px;
+        }
+        a{
+            color:white;
+            background-color: rgb(7, 107, 201);
+            padding:10px 30px;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            font-size: 20px;
+        }
+        a:hover{
+            border: 2px solid limegreen;
+            background-color: transparent;
+        }
+        
+    </style>
+</head>
+<body>
+        <div class="hello">
+            <a href="./01/index.html" class="p01"  target="_blank">Login page: 01 <span></span></a>
+            <a href="./02/index.html" target="_blank" class="p02" > Login Page: 02</a>
+            <a href="./03/index.html" target="_blank" class="p03" >Login Page: 03</a>
+        </div>
+        <div class="yellow">
+            <p class="id one">This Login Page Theme Is <span> Falling Man Concept</span></p>
+            <p class="id two">This Login Page Theme Is <span> Adobe Style Concept</span></p>
+            <p class="id three">This Login Page Theme Is <span> Tokyo Night Concept</span></p>
+        </div>
+</body>
+</html>
