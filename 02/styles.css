@@ -1,0 +1,296 @@
+@font-face {
+    font-family: 'pro medium';
+    src: url(./assets/D-DIN-PRO-600-SemiBold.otf);
+}
+@font-face{
+    font-family:'pro bold';
+    src:url(./assets/D-DIN-PRO-700-Bold.otf);
+}
+@font-face{
+    font-family:'pro reg';
+    src:url('./assets/D-DIN-PRO-400-Regular.otf')
+}
+:root{
+    --medium:'pro medium';
+    --bold:'pro bold';
+    --reg:'pro reg';
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* color: rgb(0, 231, 169); */
+    cursor:default;
+    transition: all 0.019s cubic-bezier(0.445, 0.05, 0.55, 0.95)
+}
+body{
+    background-image: linear-gradient(200deg,#3059a5 ,#4e51ad 60%) ;
+    background-repeat: no-repeat;
+    height: 199vh;
+    overflow: hidden;
+    font-family: 'pro bold';
+    background-size: cover;
+}
+main{
+    width: 65%;
+    margin:1vh auto;
+    background-color: white;
+    border-radius:10px;
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.4),
+    0px 6px 18px rgba(44,44,244,0.5);
+    transition: color 0.15s  ease,background-color 0.45s ease-in-out;
+}
+main:hover,main:hover input::placeholder,main:hover select,option{
+    background-color: black;
+    color:white;
+    transition: all 0.005s  ease;
+}
+main:hover input::placeholder{
+    background-color: transparent;
+}
+main:hover section>div:first-child{
+    box-shadow: 0px 0px 1px 2px  rgba(118, 118, 47, 0.5) ;
+}
+select{
+    color:black;
+}
+main+h1{
+    position: absolute;
+    bottom:20px;
+    left:15px;
+    transform: skew(-6deg);
+    font-size: 19px;
+    color:rgba(255, 255, 255, 0.603);
+    letter-spacing: 2px;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:40px;
+    width: 90%;
+    margin-inline:auto;
+    padding-block:20px;
+    position: relative;
+    
+    /* padding:20px 40px; */
+}
+section>div:first-child {
+    display: flex;
+    width:45%;
+    height: 38rem;
+    overflow: hidden;
+    background-color: #e4953a77;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    gap:5px;
+    margin:10px auto 5px;
+    transition: all 0.15s ease-in;
+    box-shadow: 0px 0px 50px rgba(0,0,0,0.6),
+}
+section>div:first-child  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    transition: all 0.15s ease-in;
+    animation: slide 20s 1.5s linear infinite;
+  }
+.namecard{
+   object-position: left !important; 
+   /* margin:-1px 2px !important; */
+}
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+      filter: blur(0px);
+    }
+    10% {
+      filter: blur(0px);
+      transform: translateX(-110%);
+    }
+    20% {
+      filter: blur(0px);
+      transform: translateX(-220%);
+    }
+    30% {
+      filter: blur(0px);
+      transform: translateX(-330%);
+    }
+    40% {
+      filter: blur(0px);
+      transform: translateX(-440%);
+    }
+    50% {
+      filter: blur(0px);
+      transform: translateX(-550%);
+    }
+    60% {
+      filter: blur(0px);
+      transform: translateX(-660%);
+    }
+    70% {
+      filter: blur(0px);
+      transform: translateX(-770%);
+    }
+    80% {
+      filter: blur(0px);
+      transform: translateX(-880%);
+    }
+    90% {
+      filter: blur(2px);
+      transform: translateX(-900%);
+    }
+    100% {
+      transform: translateX(1%);
+      filter: blur(10px);
+    }
+  }
+h3{
+    font-size: 45px;
+    letter-spacing: 4px;
+    margin-top:-5px;
+    margin-bottom:20px;
+    transition: all .15s ease;
+    cursor: default;
+    transition: all 0.15s ease-in-out;
+}  
+h3:after{
+    content:'';
+    height: 5px;
+    width: 15% !important;
+    display: block;
+    background-color: #3059a5;
+    border-radius: 10px;
+    margin:6px 0px;
+    transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+}
+.second:hover h3:after{
+    width: 40% !important;
+    background-color: rgba(4, 172, 4, 0.714);
+}
+.second{
+    width:85%;
+}
+h3+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
+    margin-inline: auto;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+label span{
+    letter-spacing: 1.5px;
+}
+input,select{
+    outline:none;
+    border:none;
+    padding:10px 2em 13px 13px;
+    border-radius: 10px;
+    margin:2px 0px;
+    letter-spacing: 1px;
+    background-color: rgba(226, 224, 224, 0.484);
+}
+select{
+    padding:10px;
+}
+input:focus{
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.7) ;
+    background-color: white;
+    cursor: text;;
+}
+input::placeholder{
+    letter-spacing: 2px;
+}
+
+input[type="checkbox"]{
+    transform: scale(1.7);
+    margin:-2px 0px 0px 0px;
+    background-color: transparent;
+}
+input[type="checkbox"]:focus{
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.0);
+}
+.flex{
+    flex-direction: row;
+    gap:15px;
+    width: 90%;
+    margin:10px 0px;
+    align-items: center;
+}
+.flex p{
+    letter-spacing: 1px;
+    margin:0px ;
+    font-size: 14px;
+    line-height: 19px;
+
+}
+.last{
+    margin-top:12px;
+}
+
+.con{
+    display: flex;
+    flex-direction: row;
+    /* gap:15px; */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* margin:3px 0px 3px -25px; */
+}
+.con label:first-child{
+    margin-left:-0.5px;
+}
+.con label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left:10px;
+    gap:10px;
+    flex-wrap: wrap;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    justify-content: space-between;
+}
+.footer p a{
+    text-decoration: none;
+    font-size: 18px;
+    margin:0px 3px;
+}
+a:hover{
+  color:red;
+transform: skew(-6deg);
+text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+button{
+    font-family: var(--bold);
+    letter-spacing: 1.5px;
+    background-color: #3059a5;
+    color:white;
+    padding:12px 30px;
+    outline:0px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    border:1px solid rgba(0, 0, 0, 0);
+}
+button:hover{
+    background-color: #ff0000a8;
+    color:rgba(255, 255, 255, 0.841);
+    filter: brightness(120%);
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+}
+button:active{
+    background-color: transparent;
+    color:black;
+}

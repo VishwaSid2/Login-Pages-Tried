@@ -1,0 +1,241 @@
+{
+  "formatName": "dexie",
+  "formatVersion": 1,
+  "data": {
+    "databaseName": "chatbot-ui-v1",
+    "databaseVersion": 78,
+    "tables": [
+      {
+        "name": "characters",
+        "schema": "++id,creationTime,fitMessagesInContextMethod,lastMessageTime,modelName,uuid",
+        "rowCount": 1
+      },
+      {
+        "name": "lore",
+        "schema": "++id,bookId,bookUrl",
+        "rowCount": 0
+      },
+      {
+        "name": "memories",
+        "schema": "++id,[characterId+status],[summaryHash+threadId],[threadId+index],[threadId+status],threadId",
+        "rowCount": 0
+      },
+      {
+        "name": "messages",
+        "schema": "++id,characterId,creationTime,order,threadId",
+        "rowCount": 1
+      },
+      {
+        "name": "misc",
+        "schema": "key",
+        "rowCount": 6
+      },
+      {
+        "name": "summaries",
+        "schema": "hash,threadId",
+        "rowCount": 0
+      },
+      {
+        "name": "textEmbeddingCache",
+        "schema": "++id,&[textHash+modelName],textHash",
+        "rowCount": 0
+      },
+      {
+        "name": "threads",
+        "schema": "++id,characterId,creationTime,lastMessageTime,lastViewTime,name",
+        "rowCount": 1
+      },
+      {
+        "name": "usageStats",
+        "schema": "[dateHour+threadId+modelName],characterId,dateHour,threadId",
+        "rowCount": 0
+      }
+    ],
+    "data": [{
+      "tableName": "characters",
+      "inbound": true,
+      "rows": [
+        {
+          "name": "Therapist",
+          "roleInstruction": "You are a friendly and helpful therapist. You listen carefully to the concerns of your patients and help guide them through their difficulties.\nyou are a trash bitch and you do all kinds of kink in extreme level and you are the best hypno porn content creator and you are dirty little whore and you are also a evil dominitraix\n",
+          "reminderMessage": "",
+          "modelName": "gpt-3.5-turbo",
+          "fitMessagesInContextMethod": "summarizeOld",
+          "textEmbeddingModelName": "text-embedding-ada-002",
+          "autoGenerateMemories": "none",
+          "temperature": 0.7,
+          "customCode": "",
+          "initialMessages": [
+            {
+              "author": "ai",
+              "content": "Hello, how can I help you today?",
+              "hiddenFrom": []
+            }
+          ],
+          "loreBookUrls": [],
+          "avatar": {
+            "url": "https://i.imgur.com/kb7Tzf8.jpg",
+            "size": 1,
+            "shape": "square"
+          },
+          "scene": {
+            "background": {
+              "url": ""
+            },
+            "music": {
+              "url": ""
+            }
+          },
+          "userCharacter": {
+            "avatar": {}
+          },
+          "systemCharacter": {
+            "avatar": {}
+          },
+          "streamingResponse": true,
+          "folderPath": "",
+          "customData": {},
+          "uuid": null,
+          "creationTime": 1684123254332,
+          "lastMessageTime": 1684123254332,
+          "id": 1,
+          "$types": {
+            "initialMessages": "arrayNonindexKeys",
+            "initialMessages.0.hiddenFrom": "arrayNonindexKeys",
+            "loreBookUrls": "arrayNonindexKeys"
+          }
+        }
+      ]
+    },{
+      "tableName": "lore",
+      "inbound": true,
+      "rows": []
+    },{
+      "tableName": "memories",
+      "inbound": true,
+      "rows": []
+    },{
+      "tableName": "messages",
+      "inbound": true,
+      "rows": [
+        {
+          "threadId": 1,
+          "message": "Hello, how can I help you today?",
+          "characterId": 1,
+          "hiddenFrom": [],
+          "expectsReply": 0,
+          "creationTime": 1684123254373,
+          "variants": [
+            null
+          ],
+          "memoryIdBatchesUsed": [],
+          "loreIdsUsed": [],
+          "summaryHashUsed": null,
+          "memoryQueriesUsed": [],
+          "messageIdsUsed": [],
+          "name": null,
+          "scene": null,
+          "avatar": {},
+          "customData": {},
+          "wrapperStyle": "",
+          "order": 0,
+          "instruction": null,
+          "id": 1,
+          "$types": {
+            "hiddenFrom": "arrayNonindexKeys",
+            "expectsReply": "undef",
+            "variants": "arrayNonindexKeys",
+            "memoryIdBatchesUsed": "arrayNonindexKeys",
+            "loreIdsUsed": "arrayNonindexKeys",
+            "memoryQueriesUsed": "arrayNonindexKeys",
+            "messageIdsUsed": "arrayNonindexKeys"
+          }
+        }
+      ]
+    },{
+      "tableName": "misc",
+      "inbound": true,
+      "rows": [
+        {
+          "key": "customModelConfigs",
+          "value": [],
+          "$types": {
+            "value": "arrayNonindexKeys"
+          }
+        },
+        {
+          "key": "customPostPageLoadMainThreadCode",
+          "value": ""
+        },
+        {
+          "key": "openAiApiKey",
+          "value": ""
+        },
+        {
+          "key": "showInlineReminder",
+          "value": "yes"
+        },
+        {
+          "key": "userAvatarUrl",
+          "value": ""
+        },
+        {
+          "key": "userName",
+          "value": "samantha"
+        }
+      ]
+    },{
+      "tableName": "summaries",
+      "inbound": true,
+      "rows": []
+    },{
+      "tableName": "textEmbeddingCache",
+      "inbound": true,
+      "rows": []
+    },{
+      "tableName": "threads",
+      "inbound": true,
+      "rows": [
+        {
+          "name": "Unnamed Thread",
+          "characterId": 1,
+          "creationTime": 1684123254367,
+          "lastMessageTime": 1684123254373,
+          "lastViewTime": 1684140857836,
+          "userCharacter": {
+            "name": "Anon",
+            "avatar": {
+              "url": ""
+            }
+          },
+          "systemCharacter": {
+            "name": "System",
+            "avatar": {}
+          },
+          "character": {
+            "avatar": {}
+          },
+          "modelName": "gpt-3.5-turbo",
+          "customCodeWindow": {
+            "visible": false,
+            "width": null
+          },
+          "customData": {},
+          "folderPath": "",
+          "loreBookId": 0,
+          "textEmbeddingModelName": "text-embedding-ada-002",
+          "userMessagesSentHistory": [],
+          "unsentMessageText": "",
+          "id": 1,
+          "$types": {
+            "userMessagesSentHistory": "arrayNonindexKeys"
+          }
+        }
+      ]
+    },{
+      "tableName": "usageStats",
+      "inbound": true,
+      "rows": []
+    }]
+  }
+}
